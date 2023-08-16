@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let list = [
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["banana", "apple"], 
+                "profile" : {"birth": "20201111", "img": "https://wwww.test.com/1"}
+            },
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["melon", "orange"], 
+                "profile" : {"birth": "20201212", "img": "https://wwww.test.com/2"}
+            }
+        ]
+
+        //두번째 객체의 title의 값;
+        //console.log(list[1]['title']);
+        //const [, a] = list;
+        //const {title} = a;
+        //console.log(a); // 두번째 객체
+
+        //const [,{title}]= list; // 두번째 객체의요소를불러움
+        //console.log(title);
+
+        //const[, {title: a, info:b, profile:c}] = list;
+        //console.log(a,b,c)
+
+        //두번째 객체의 info의 첫번째 요소
+        //const [, {info:[a]}]= list;
+        //console.log(a);
+
+        //첫번째 객체의 profile 안에 있는 birth와 img값 구조분해할당
+        const[{profile : {birth:a, img:b}}] = list;
+        console.log(a,b);
+
+
+    </script>
+    
+</body>
+</html>
